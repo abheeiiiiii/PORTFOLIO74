@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AHINAV TIWARI | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+</head>
+<body>
+
+  <header>
+    <h1><span class="typing" id="typedText"></span></h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about" data-aos="fade-up">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <p>I am a passionate web developer building beautiful and functional websites.</p>
+    </div>
+  </section>
+
+  <section id="skills" data-aos="zoom-in">
+    <h2>Skills</h2>
+    <div class="skills-cards">
+  <div class="skill-card html">HTML</div>
+  <div class="skill-card css">CSS</div>
+  <div class="skill-card js">JavaScript</div>
+  <div class="skill-card c">C Language</div>
+  <div class="skill-card c">C++</div>
+  <div class="skill-card c">DSA</div>
+</div>
+
+  </section>
+
+  <section id="projects" data-aos="fade-left">
+    <h2>Projects</h2>
+    <div class="projects-content">
+      <div class="projects-grid">
+        <div class="project calculator">
+          <div class="watermark"></div>
+          <h3>Calculator</h3>
+          <p>A simple calculator using HTML, CSS, and JavaScript.</p>
+        </div>
+        <div class="project dragon">
+          <div class="dragon-glow"></div>
+          <h3>Dragon Cursor</h3>
+          <p>Fun animated cursor built with CSS and JS.</p>
+        </div>
+        <div class="project archer">
+    <div class="archer-watermark"></div>
+    <h3>Bow and Arrow</h3>
+    <p>Interactive game built with HTML, CSS, and JavaScript.</p>
+  </div>
+</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" data-aos="flip-up">
+  <h2>CONTACT ME</h2>
+  <form onsubmit="submitForm(event)" action="https://formsubmit.co/tiwariabhinav318@gmail.com" method="POST">
+    <input type="hidden" name="_captcha" value="false" />
+    <input type="hidden" name="_template" value="box" />
+    <input type="hidden" name="_autoresponse" value="Thank you! I’ll get back to you soon.">
+
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    
+    <button type="submit">Send</button>
+    <p class="form-success"></p>
+
+  </form>
+</section>
+
+
+  <div class="social-links">
+    <a href="https://github.com/abheeiiiiii" target="_blank">
+      <img src="https://img.icons8.com/ios-glyphs/30/github.png" alt="GitHub" />
+    </a>
+    <a href="https://www.linkedin.com/in/abhinav-tiwari-359b0a342" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/30/linkedin.png" alt="LinkedIn" />
+    </a>
+    <a href="https://www.instagram.com/abheeiiiiii" target="_blank">
+      <img src="https://img.icons8.com/ios-glyphs/30/instagram-new.png" alt="Instagram" />
+    </a>
+    <a href="https://x.com/AbhinavTiw41571" target="_blank">
+      <img src="https://img.icons8.com/ios-glyphs/30/twitter.png" alt="Twitter" />
+    </a>
+  </div>
+
+  <footer>
+    <p>© 2025 Abhinav Tiwari. All rights reserved.</p>
+  </footer>
+
+  <div class="theme-toggle-icon" id="themeIcon">🌙</div>
+
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 120
+    });
+  </script>
+</body>
+</html>
