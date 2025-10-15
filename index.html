@@ -1,116 +1,239 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AHINAV TIWARI | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <title>ABHINAV TIWARI | Portfolio</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <!-- AOS Animation Library -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="antialiased">
 
-  <header>
-    <h1><span class="typing" id="typedText"></span></h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg shadow-sm">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="text-xl font-bold text-slate-800 dark:text-white">Abhinav Tiwari</div>
+      <nav class="hidden md:flex space-x-6">
+        <a href="#about" class="text-slate-600 dark:text-slate-300 hover:text-sky-500 dark:hover:text-sky-400 transition-colors">About</a>
+        <a href="#skills" class="text-slate-600 dark:text-slate-300 hover:text-sky-500 dark:hover:text-sky-400 transition-colors">Skills</a>
+        <a href="#projects" class="text-slate-600 dark:text-slate-300 hover:text-sky-500 dark:hover:text-sky-400 transition-colors">Projects</a>
+        <a href="#contact" class="text-slate-600 dark:text-slate-300 hover:text-sky-500 dark:hover:text-sky-400 transition-colors">Contact</a>
+      </nav>
+      <button id="theme-toggle" class="p-2 rounded-full text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-sky-500">
+        <!-- Moon Icon -->
+        <svg id="theme-icon-dark" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+        </svg>
+        <!-- Sun Icon -->
+        <svg id="theme-icon-light" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+      </button>
+    </div>
   </header>
 
-  <section id="about" data-aos="fade-up">
-    <h2>About Me</h2>
-    <div class="about-content">
-      <p>I am a passionate web developer building beautiful and functional websites.</p>
-    </div>
-  </section>
+  <main class="container mx-auto px-4 py-12 md:py-20">
 
-  <section id="skills" data-aos="zoom-in">
-    <h2>Skills</h2>
-    <div class="skills-cards">
-  <div class="skill-card html">HTML</div>
-  <div class="skill-card css">CSS</div>
-  <div class="skill-card js">JavaScript</div>
-  <div class="skill-card c">C Language</div>
-  <div class="skill-card c">C++</div>
-  <div class="skill-card c">DSA</div>
-</div>
+    <!-- Hero Section -->
+    <section id="hero" class="text-center min-h-[60vh] flex flex-col justify-center items-center">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">
+            <span id="typed-text" class="bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-indigo-500 dark:from-sky-400 dark:to-indigo-400"></span><span class="typing-cursor"></span>
+        </h1>
+        <p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-2xl">
+            A passionate web developer and a data analyst.
+        </p>
+    </section>
 
-  </section>
-
-  <section id="projects" data-aos="fade-left">
-    <h2>Projects</h2>
-    <div class="projects-content">
-      <div class="projects-grid">
-        <div class="project calculator">
-          <div class="watermark"></div>
-          <h3>Calculator</h3>
-          <p>A simple calculator using HTML, CSS, and JavaScript.</p>
+    <!-- About Section -->
+    <section id="about" class="py-16 md:py-24">
+      <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12">
+        <img src="profile.jpeg" alt="Abhinav Tiwari smiling and facing the camera in a well-lit indoor setting with a neutral background, conveying a friendly and approachable mood" class="w-48 h-48 md:w-60 md:h-60 rounded-full object-cover shadow-lg ring-4 ring-white" data-aos="fade-right">
+        <div data-aos="fade-left">
+          <h2 class="text-3xl font-bold mb-4 text-slate-800 dark:text-white">About Me</h2>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+            Hi, I’m Abhinav Tiwari, currently pursuing Computer Science Engineering at Techno India University. My journey began with a deep interest in web development, where I honed my skills in building interactive and responsive applications as a Full Stack Developer.
+            <br><br>
+            Over time, my curiosity for innovation and data-driven problem-solving has led me toward the world of Artificial Intelligence and Machine Learning. I’m now focused on expanding my expertise in ML algorithms, data science, and AI-powered applications, aiming to build intelligent systems that make technology more adaptive and human-centered.
+            <br><br>
+            I believe in continuous learning, collaboration, and sharing knowledge — and I’m always eager to connect with passionate individuals in the fields of software development and machine learning.
+            <br><br>
+            Let’s connect, collaborate, and grow together!
+          </p>
         </div>
-        <div class="project dragon">
-          <div class="dragon-glow"></div>
-          <h3>Dragon Cursor</h3>
-          <p>Fun animated cursor built with CSS and JS.</p>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 md:py-24 bg-slate-100 dark:bg-slate-800/50 rounded-2xl">
+      <div class="max-w-5xl mx-auto" data-aos="fade-up">
+        <h2 class="text-3xl font-bold text-center mb-12 text-slate-800 dark:text-white">My Skills</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16">
+
+          <!-- Web Development Category -->
+          <div class="group" style="perspective: 1000px;">
+            <div class="relative w-full h-80">
+              <!-- Front Card -->
+              <div class="skill-card-main absolute w-full h-full bg-white dark:bg-slate-800 rounded-xl shadow-lg flex flex-col justify-center items-center p-6 text-center group-hover:opacity-0 group-hover:transform group-hover:rotate-y-180">
+                <img src="https://img.icons8.com/fluency/48/domain.png" alt="Web Development" class="w-16 h-16 mb-4"/>
+                <h3 class="text-2xl font-bold mb-2">Web Development</h3>
+                <p class="text-slate-600 dark:text-slate-400">Building responsive and dynamic websites.</p>
+              </div>
+              <!-- Back Card (revealed on hover) -->
+              <div class="skill-card-hover absolute w-full h-full bg-white dark:bg-slate-800 rounded-xl shadow-lg p-6 opacity-0 transform rotate-y-180 group-hover:opacity-100 group-hover:rotate-y-0">
+                <h3 class="text-xl font-bold text-center mb-4">Core Technologies</h3>
+                <div class="grid grid-cols-3 gap-4 text-center">
+                    <div class="flex flex-col items-center">
+                        <img src="https://img.icons8.com/color/48/html-5--v1.png" alt="HTML5" class="w-10 h-10 mb-1"/>
+                        <span class="text-sm font-semibold">HTML</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="https://img.icons8.com/color/48/css3.png" alt="CSS3" class="w-10 h-10 mb-1"/>
+                        <span class="text-sm font-semibold">CSS</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="https://img.icons8.com/color/48/javascript.png" alt="JavaScript" class="w-10 h-10 mb-1"/>
+                        <span class="text-sm font-semibold">JavaScript</span>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Data Analysis Category -->
+          <div class="group" style="perspective: 1000px;">
+            <div class="relative w-full h-80">
+              <!-- Front Card -->
+              <div class="skill-card-main absolute w-full h-full bg-white dark:bg-slate-800 rounded-xl shadow-lg flex flex-col justify-center items-center p-6 text-center group-hover:opacity-0 group-hover:transform group-hover:rotate-y-180">
+                <img src="https://img.icons8.com/fluency/48/statistics.png" alt="Data Analysis" class="w-16 h-16 mb-4"/>
+                <h3 class="text-2xl font-bold mb-2">Data Analysis</h3>
+                <p class="text-slate-600 dark:text-slate-400">Analyzing data with Python and its powerful libraries.</p>
+              </div>
+              <!-- Back Card (revealed on hover) -->
+              <div class="skill-card-hover absolute w-full h-full bg-white dark:bg-slate-800 rounded-xl shadow-lg p-6 opacity-0 transform rotate-y-180 group-hover:opacity-100 group-hover:rotate-y-0">
+                <div class="flex items-center justify-center gap-4 mb-4">
+                  <img src="https://img.icons8.com/color/48/python--v1.png" alt="Python" class="w-10 h-10"/>
+                  <h3 class="text-xl font-bold">Python Libraries</h3>
+                </div>
+                <ul class="grid grid-cols-2 gap-x-6 gap-y-2 text-sm text-slate-600 dark:text-slate-300">
+                  <li class="flex items-center"><span class="w-2 h-2 bg-sky-500 rounded-full mr-2"></span>Numpy</li>
+                  <li class="flex items-center"><span class="w-2 h-2 bg-sky-500 rounded-full mr-2"></span>Pandas</li>
+                  <li class="flex items-center"><span class="w-2 h-2 bg-sky-500 rounded-full mr-2"></span>Matplotlib</li>
+                  <li class="flex items-center"><span class="w-2 h-2 bg-sky-500 rounded-full mr-2"></span>Scikit-learn</li>
+                  <li class="flex items-center"><span class="w-2 h-2 bg-sky-500 rounded-full mr-2"></span>Seaborn</li>
+                  <li class="flex items-center"><span class="w-2 h-2 bg-sky-500 rounded-full mr-2"></span>PyTorch</li>
+                  <li class="flex items-center"><span class="w-2 h-2 bg-sky-500 rounded-full mr-2"></span>TensorFlow</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
         </div>
-        <div class="project archer">
-    <div class="archer-watermark"></div>
-    <h3>Bow and Arrow</h3>
-    <p>Interactive game built with HTML, CSS, and JavaScript.</p>
-  </div>
-</div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 md:py-24">
+      <div class="max-w-4xl mx-auto" data-aos="fade-up">
+        <h2 class="text-3xl font-bold text-center mb-12 text-slate-800 dark:text-white">Projects</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <!-- Project 1: Calculator -->
+          <a href="YOUR_CALCULATOR_PROJECT_LINK_HERE" target="_blank" rel="noopener noreferrer" class="block group relative rounded-lg shadow-lg overflow-hidden h-48 flex justify-center items-center bg-white dark:bg-slate-800 transition-transform duration-300 hover:-translate-y-1">
+            <h3 class="text-2xl font-bold text-slate-800 dark:text-white transition-opacity duration-300 group-hover:opacity-0">Calculator</h3>
+            <div class="absolute inset-0 bg-slate-900 bg-opacity-95 p-5 flex flex-col justify-center items-center text-center text-white opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-90 group-hover:scale-100">
+              <h3 class="text-xl font-bold mb-2">Calculator</h3>
+              <p class="text-sm">A simple calculator built with HTML, CSS, and JavaScript, featuring a clean user interface.</p>
+              <span class="inline-block mt-4 px-4 py-2 border border-white rounded-full text-xs font-semibold">View Project</span>
+            </div>
+          </a>
+
+          <!-- Project 2: Dragon Cursor -->
+          <a href="YOUR_DRAGON_CURSOR_PROJECT_LINK_HERE" target="_blank" rel="noopener noreferrer" class="block group relative rounded-lg shadow-lg overflow-hidden h-48 flex justify-center items-center bg-white dark:bg-slate-800 transition-transform duration-300 hover:-translate-y-1">
+            <h3 class="text-2xl font-bold text-slate-800 dark:text-white transition-opacity duration-300 group-hover:opacity-0">Dragon Cursor</h3>
+            <div class="absolute inset-0 bg-slate-900 bg-opacity-95 p-5 flex flex-col justify-center items-center text-center text-white opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-90 group-hover:scale-100">
+              <h3 class="text-xl font-bold mb-2">Dragon Cursor</h3>
+              <p class="text-sm">A fun, animated dragon cursor effect created purely with CSS and JavaScript.</p>
+              <span class="inline-block mt-4 px-4 py-2 border border-white rounded-full text-xs font-semibold">View Project</span>
+            </div>
+          </a>
+
+          <!-- Project 3: Bow and Arrow -->
+          <a href="YOUR_BOW_AND_ARROW_PROJECT_LINK_HERE" target="_blank" rel="noopener noreferrer" class="block group relative rounded-lg shadow-lg overflow-hidden h-48 flex justify-center items-center bg-white dark:bg-slate-800 transition-transform duration-300 hover:-translate-y-1">
+            <h3 class="text-2xl font-bold text-slate-800 dark:text-white transition-opacity duration-300 group-hover:opacity-0">Bow & Arrow</h3>
+            <div class="absolute inset-0 bg-slate-900 bg-opacity-95 p-5 flex flex-col justify-center items-center text-center text-white opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-90 group-hover:scale-100">
+              <h3 class="text-xl font-bold mb-2">Bow and Arrow Game</h3>
+              <p class="text-sm">An interactive bow and arrow game to test your aiming skills, built with vanilla JS.</p>
+              <span class="inline-block mt-4 px-4 py-2 border border-white rounded-full text-xs font-semibold">View Project</span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-slate-100 dark:bg-slate-800/50 rounded-2xl">
+      <div class="max-w-2xl mx-auto text-center" data-aos="zoom-in">
+        <h2 class="text-3xl font-bold mb-4 text-slate-800 dark:text-white">Get In Touch</h2>
+        <p class="text-slate-600 dark:text-slate-300 mb-8">
+          Have a question or want to work together? Feel free to reach out!
+        </p>
+        <form id="contact-form" action="https://formsubmit.co/tiwariabhinav318@gmail.com" method="POST">
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="box" />
+          <input type="hidden" name="_autoresponse" value="Thank you! I’ll get back to you soon.">
+
+          <div class="grid grid-cols-1 gap-6">
+            <input class="bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-md p-3 focus:ring-2 focus:ring-sky-500 focus:outline-none transition" type="text" name="name" placeholder="Your Name" required />
+            <input class="bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-md p-3 focus:ring-2 focus:ring-sky-500 focus:outline-none transition" type="email" name="email" placeholder="Your Email" required />
+            <textarea class="bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-md p-3 focus:ring-2 focus:ring-sky-500 focus:outline-none transition h-32 resize-none" name="message" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="mt-6 w-full bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-6 rounded-md transition-transform transform hover:scale-105">
+            Send Message
+          </button>
+          <p id="form-success-message" class="mt-4 text-green-500 opacity-0 transition-opacity">✅ Your message has been sent successfully!</p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-100 dark:bg-slate-900">
+    <div class="container mx-auto px-4 py-8">
+      <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+        <div class="mb-4 md:mb-0">
+          <p class="text-slate-600 dark:text-slate-400">&copy; 2025 Abhinav Tiwari. All rights reserved.</p>
+        </div>
+        <div class="flex justify-center space-x-6">
+          <a href="https://github.com/abheeiiiiii" target="_blank" class="text-slate-500 hover:text-sky-500 dark:hover:text-sky-400 transition">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/abhinav-tiwari-359b0a342" target="_blank" class="text-slate-500 hover:text-sky-500 dark:hover:text-sky-400 transition">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="https://x.com/AbhinavTiw41571" target="_blank" class="text-slate-500 hover:text-sky-500 dark:hover:text-sky-400 transition">
+             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+        </div>
       </div>
     </div>
-  </section>
-
-  <section id="contact" data-aos="flip-up">
-  <h2>CONTACT ME</h2>
-  <form onsubmit="submitForm(event)" action="https://formsubmit.co/tiwariabhinav318@gmail.com" method="POST">
-    <input type="hidden" name="_captcha" value="false" />
-    <input type="hidden" name="_template" value="box" />
-    <input type="hidden" name="_autoresponse" value="Thank you! I’ll get back to you soon.">
-
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <textarea name="message" placeholder="Your Message" required></textarea>
-    
-    <button type="submit">Send</button>
-    <p class="form-success"></p>
-
-  </form>
-</section>
-
-
-  <div class="social-links">
-    <a href="https://github.com/abheeiiiiii" target="_blank">
-      <img src="https://img.icons8.com/ios-glyphs/30/github.png" alt="GitHub" />
-    </a>
-    <a href="https://www.linkedin.com/in/abhinav-tiwari-359b0a342" target="_blank">
-      <img src="https://img.icons8.com/ios-filled/30/linkedin.png" alt="LinkedIn" />
-    </a>
-    <a href="https://www.instagram.com/abheeiiiiii" target="_blank">
-      <img src="https://img.icons8.com/ios-glyphs/30/instagram-new.png" alt="Instagram" />
-    </a>
-    <a href="https://x.com/AbhinavTiw41571" target="_blank">
-      <img src="https://img.icons8.com/ios-glyphs/30/twitter.png" alt="Twitter" />
-    </a>
-  </div>
-
-  <footer>
-    <p>© 2025 Abhinav Tiwari. All rights reserved.</p>
   </footer>
 
-  <div class="theme-toggle-icon" id="themeIcon">🌙</div>
+  <!-- Hidden Iframe for Form Submission -->
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
 
-  <script src="script.js"></script>
+  <!-- AOS and Custom Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1000,
-      once: true,
-      offset: 120
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
+
