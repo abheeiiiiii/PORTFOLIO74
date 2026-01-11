@@ -1,60 +1,66 @@
+/* Custom Styles */
+:root {
+  --bg-light: #f8fafc; /* slate-50 */
+  --text-light: #0f172a; /* slate-900 */
+  --card-light: #ffffff;
+  --primary-light: #0ea5e9; /* sky-500 */
+
+  --bg-dark: #0f172a; /* slate-900 */
+  --text-dark: #f8fafc; /* slate-50 */
+  --card-dark: #1e293b; /* slate-800 */
+  --primary-dark: #38bdf8; /* sky-400 */
+}
+
+/* Basic styles */
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f4f4f4;
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.calculator {
-  background-color: #222;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+/* Dark mode styles */
+.dark body {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
 }
 
-#display {
-  width: 100%;
-  height: 50px;
-  font-size: 24px;
-  margin-bottom: 15px;
-  padding: 5px;
-  text-align: right;
-  border: none;
-  border-radius: 5px;
+/* Typing animation cursor */
+.typing-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.5rem; /* Adjust to match font size */
+  background-color: var(--primary-light);
+  animation: blink 0.7s infinite;
+}
+.dark .typing-cursor {
+  background-color: var(--primary-dark);
 }
 
-.buttons {
-  display: grid;
-  grid-template-columns: repeat(4, 60px);
-  grid-gap: 10px;
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
-button {
-  height: 60px;
-  font-size: 20px;
-  border: none;
-  border-radius: 8px;
-  background-color: #444;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.2s;
+/* Styles for the skill card hover effect */
+.skill-card-main, .skill-card-hover {
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  backface-visibility: hidden; /* Helps with smooth transforms */
 }
 
-button:hover {
-  background-color: #555;
+.transform-style-3d {
+  transform-style: preserve-3d;
 }
 
-.equal {
-  grid-row: span 2;
-  background-color: #ff9500;
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
-.equal:hover {
-  background-color: #e68a00;
+.rotate-y-180 {
+  transform: rotateY(180deg);
 }
 
-.zero {
-  grid-column: span 2;
+.group:hover .group-hover\:rotate-y-180 {
+  transform: rotateY(180deg);
 }
